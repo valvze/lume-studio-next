@@ -1,164 +1,84 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ScrollView } from "./scroll-view";
+import { Phone, Mail, User } from "lucide-react";
 
-export default function Testimonials() {
+const references = [
+  {
+    name: "David Jackson",
+    role: "Supervisor at JD Sports, Townsville",
+    email: "davidtj2001@outlook.com",
+    phone: "0439 378 228",
+    initials: "DJ",
+  },
+  {
+    name: "Helen",
+    role: "Supervisor at JD Sports, Townsville",
+    email: "",
+    phone: "0439 349 824",
+    initials: "H",
+  },
+  {
+    name: "Dr. Eric Smith",
+    role: "Intern at Cairns Hospital",
+    email: "eric.smith@my.jcu.edu.au",
+    phone: "",
+    initials: "ES",
+  },
+];
+
+export default function ReferencesSection() {
   return (
-    <section className="py-16 md:py-32" id="testimonials">
+    <section className="py-16 md:py-32" id="references">
       <div className="mx-auto max-w-6xl space-y-8 px-6 md:space-y-16">
         <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
           <ScrollView>
             <h2 className="text-4xl font-medium lg:text-5xl">
-              Build by makers, loved by thousand developers
+              References
             </h2>
           </ScrollView>
           <ScrollView delay={0.2}>
-            <p>
-              Gemini is evolving to be more than just the models. It supports an
-              entire to the APIs and platforms helping developers and businesses
-              innovate.
+            <p className="text-muted-foreground">
+              Professional references available upon request. Below are my primary contacts who can speak to my work ethic and capabilities.
             </p>
           </ScrollView>
         </div>
 
         <ScrollView delay={0.3}>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
-            <Card className="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2">
-              <CardHeader>
-                <img
-                  className="h-6 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/nike.svg"
-                  alt="Nike Logo"
-                  height="24"
-                  width="auto"
-                />
-              </CardHeader>
-              <CardContent>
-                <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                  <p className="text-xl font-medium">
-                    Tailus has transformed the way I develop web applications.
-                    Their extensive collection of UI components, blocks, and
-                    templates has significantly accelerated my workflow. The
-                    flexibility to customize every aspect allows me to create
-                    unique user experiences. Tailus is a game-changer for modern
-                    web development
-                  </p>
-
-                  <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-                    <Avatar className="size-12">
-                      <AvatarImage
-                        src="https://tailus.io/images/reviews/shekinah.webp"
-                        alt="Shekinah Tshiokufila"
-                        height="400"
-                        width="400"
-                        loading="lazy"
-                      />
-                      <AvatarFallback>ST</AvatarFallback>
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {references.map((ref, index) => (
+              <Card key={ref.name} className="hover:bg-gray-50 dark:hover:bg-gray-900/50 transition-colors">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="size-12 bg-primary/10">
+                      <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+                        {ref.initials}
+                      </AvatarFallback>
                     </Avatar>
-
-                    <div>
-                      <cite className="text-sm font-medium">
-                        Shekinah Tshiokufila
-                      </cite>
-                      <span className="text-muted-foreground block text-sm">
-                        Software Ingineer
-                      </span>
+                    <div className="space-y-2 flex-1">
+                      <div>
+                        <h3 className="font-semibold">{ref.name}</h3>
+                        <p className="text-sm text-muted-foreground">{ref.role}</p>
+                      </div>
+                      <div className="space-y-1 text-sm">
+                        {ref.email && (
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <Mail className="size-3" />
+                            <span className="truncate">{ref.email}</span>
+                          </div>
+                        )}
+                        {ref.phone && (
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <Phone className="size-3" />
+                            <span>{ref.phone}</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </blockquote>
-              </CardContent>
-            </Card>
-            <Card className="md:col-span-2">
-              <CardContent className="h-full pt-6">
-                <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                  <p className="text-xl font-medium">
-                    Tailus is really extraordinary and very practical, no need
-                    to break your head. A real gold mine.
-                  </p>
-
-                  <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-                    <Avatar className="size-12">
-                      <AvatarImage
-                        src="https://tailus.io/images/reviews/jonathan.webp"
-                        alt="Jonathan Yombo"
-                        height="400"
-                        width="400"
-                        loading="lazy"
-                      />
-                      <AvatarFallback>JY</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <cite className="text-sm font-medium">
-                        Jonathan Yombo
-                      </cite>
-                      <span className="text-muted-foreground block text-sm">
-                        Software Ingineer
-                      </span>
-                    </div>
-                  </div>
-                </blockquote>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="h-full pt-6">
-                <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                  <p>
-                    Great work on tailfolio template. This is one of the best
-                    personal website that I have seen so far!
-                  </p>
-
-                  <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
-                    <Avatar className="size-12">
-                      <AvatarImage
-                        src="https://tailus.io/images/reviews/yucel.webp"
-                        alt="Yucel Faruksahan"
-                        height="400"
-                        width="400"
-                        loading="lazy"
-                      />
-                      <AvatarFallback>YF</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <cite className="text-sm font-medium">
-                        Yucel Faruksahan
-                      </cite>
-                      <span className="text-muted-foreground block text-sm">
-                        Creator, Tailkits
-                      </span>
-                    </div>
-                  </div>
-                </blockquote>
-              </CardContent>
-            </Card>
-            <Card className="card variant-mixed">
-              <CardContent className="h-full pt-6">
-                <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                  <p>
-                    Great work on tailfolio template. This is one of the best
-                    personal website that I have seen so far!
-                  </p>
-
-                  <div className="grid grid-cols-[auto_1fr] gap-3">
-                    <Avatar className="size-12">
-                      <AvatarImage
-                        src="https://tailus.io/images/reviews/rodrigo.webp"
-                        alt="Rodrigo Aguilar"
-                        height="400"
-                        width="400"
-                        loading="lazy"
-                      />
-                      <AvatarFallback>YF</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="text-sm font-medium">Rodrigo Aguilar</p>
-                      <span className="text-muted-foreground block text-sm">
-                        Creator, TailwindAwesome
-                      </span>
-                    </div>
-                  </div>
-                </blockquote>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </ScrollView>
       </div>

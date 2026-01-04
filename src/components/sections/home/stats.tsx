@@ -1,6 +1,7 @@
 "use client";
 import { ScrollView } from "@/components/scroll-view";
 import { motion } from "motion/react";
+import { GraduationCap, Users, Award, Globe } from "lucide-react";
 
 export default function StatsSection() {
   return (
@@ -9,19 +10,17 @@ export default function StatsSection() {
         <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center">
           <ScrollView>
             <h2 className="text-4xl font-medium lg:text-5xl">
-              Driven by Design. Backed by Results.
+              At a Glance
             </h2>
           </ScrollView>
           <ScrollView delay={0.2}>
-            <p>
-              At Lume Studio, we don’t just make things look good — we create
-              thoughtful design experiences that help businesses grow, connect
-              with their audience, and stand out in a crowded digital world.
+            <p className="text-muted-foreground">
+              Combining medical education with technology, mentorship, and a passion for innovation.
             </p>
           </ScrollView>
         </div>
         <ScrollView stagger delay={0.04}>
-          <div className="grid gap-12 divide-y *:text-center md:grid-cols-3 md:gap-2 md:divide-x md:divide-y-0">
+          <div className="grid gap-12 divide-y *:text-center md:grid-cols-4 md:gap-2 md:divide-x md:divide-y-0">
             <motion.div
               variants={{
                 hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
@@ -31,10 +30,13 @@ export default function StatsSection() {
                   filter: "blur(0px)",
                 },
               }}
-              className="space-y-4"
+              className="space-y-4 pt-6 md:pt-0"
             >
-              <div className="text-5xl font-bold">+120</div>
-              <p>Projects Launched</p>
+              <div className="flex justify-center">
+                <GraduationCap className="size-8 text-primary" />
+              </div>
+              <div className="text-4xl font-bold">6.5/7</div>
+              <p className="text-sm text-muted-foreground">GPA at JCU Medicine</p>
             </motion.div>
             <motion.div
               variants={{
@@ -45,10 +47,13 @@ export default function StatsSection() {
                   filter: "blur(0px)",
                 },
               }}
-              className="space-y-4"
+              className="space-y-4 pt-6 md:pt-0"
             >
-              <div className="text-5xl font-bold">40%</div>
-              <p>Average Client Growth</p>
+              <div className="flex justify-center">
+                <Users className="size-8 text-primary" />
+              </div>
+              <div className="text-4xl font-bold">2+</div>
+              <p className="text-sm text-muted-foreground">Years Tutoring Students</p>
             </motion.div>
             <motion.div
               variants={{
@@ -59,10 +64,30 @@ export default function StatsSection() {
                   filter: "blur(0px)",
                 },
               }}
-              className="space-y-4"
+              className="space-y-4 pt-6 md:pt-0"
             >
-              <div className="text-5xl font-bold">5+</div>
-              <p>Years in the Game</p>
+              <div className="flex justify-center">
+                <Award className="size-8 text-primary" />
+              </div>
+              <div className="text-4xl font-bold">3x</div>
+              <p className="text-sm text-muted-foreground">Science Fair Gold Medals</p>
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  filter: "blur(0px)",
+                },
+              }}
+              className="space-y-4 pt-6 md:pt-0"
+            >
+              <div className="flex justify-center">
+                <Globe className="size-8 text-primary" />
+              </div>
+              <div className="text-4xl font-bold">4</div>
+              <p className="text-sm text-muted-foreground">Languages Spoken</p>
             </motion.div>
           </div>
         </ScrollView>

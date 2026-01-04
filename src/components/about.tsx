@@ -1,29 +1,20 @@
-import { Circle, Cpu, Lock, Sparkles, Zap } from "lucide-react";
+import { Circle, GraduationCap, Briefcase, Award, Languages } from "lucide-react";
 import { ScrollView } from "./scroll-view";
 import Image from "next/image";
 
-const ourPrinciples = [
-  {
-    title: "Creativity with Purpose",
-    description:
-      "Our designs aren’t just pretty; they’re built to solve problems and make an impact.",
-  },
-  {
-    title: "Collaboration is Key",
-    description:
-      "We work with you, not just for you. Great ideas come from teamwork.",
-  },
+const skills = [
+  "IT Infrastructure",
+  "Website Development",
+  "Adobe Suite",
+  "Social Media Marketing",
+  "Microsoft Office",
+];
 
-  {
-    title: "Honest & Transparent",
-    description:
-      "No confusing jargon or hidden fees. Just clear communication and real results.",
-  },
-  {
-    title: "Details Matter",
-    description:
-      "The little things make a big difference. We sweat the small stuff, so you don’t have to.",
-  },
+const languages = [
+  { name: "English", level: "Native Speaker" },
+  { name: "Gujarati", level: "Native Speaker" },
+  { name: "Hindi", level: "Proficient" },
+  { name: "French", level: "Proficient" },
 ];
 
 export default function ContentSection() {
@@ -33,42 +24,57 @@ export default function ContentSection() {
         <div className="mx-auto max-w-xl space-y-6 text-center md:space-y-12">
           <ScrollView>
             <h2 className="text-balance text-4xl font-medium lg:text-5xl">
-              About Us
+              About Me
             </h2>
           </ScrollView>
           <ScrollView>
-            <p>
-              Lume Studio was born from a simple idea—great design should do
-              more than just look good; it should make an impact. What started
-              as a passion for creativity turned into a full-fledged design
-              agency dedicated to helping brands tell their stories, connect
-              with audiences, and stand out in a crowded world.
+            <p className="text-lg">
+              I&apos;m a motivated medical student at James Cook University with a
+              multidisciplinary background spanning science research, tutoring,
+              and technology. I&apos;m passionate about combining my medical
+              knowledge with technical skills to make a meaningful impact in
+              healthcare and beyond.
             </p>
           </ScrollView>
         </div>
+
         <ScrollView>
-          <Image
-            className="rounded-(--radius) grayscale-75 object-cover aspect-[16/9] w-full"
-            src="/images/office.jpeg"
-            alt="team image"
-            height="480"
-            width="720"
-            loading="lazy"
-          />
-        </ScrollView>
-        <ScrollView>
-          <div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">
-            {ourPrinciples.map((principle, index) => (
-              <div className="space-y-3" key={index}>
-                <div className="flex items-center gap-2">
-                  <Circle className="size-4" />
-                  <h3 className="text-sm font-medium">{principle.title}</h3>
-                </div>
-                <p className="text-muted-foreground text-sm">
-                  {principle.description}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {/* Skills Section */}
+            <div className="space-y-6 p-6 rounded-2xl bg-gray-50 dark:bg-gray-900/50">
+              <div className="flex items-center gap-3">
+                <Briefcase className="size-6" />
+                <h3 className="text-xl font-semibold">Skills</h3>
               </div>
-            ))}
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1.5 rounded-full text-sm bg-white dark:bg-gray-800 border"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Languages Section */}
+            <div className="space-y-6 p-6 rounded-2xl bg-gray-50 dark:bg-gray-900/50">
+              <div className="flex items-center gap-3">
+                <Languages className="size-6" />
+                <h3 className="text-xl font-semibold">Languages</h3>
+              </div>
+              <div className="space-y-3">
+                {languages.map((lang, index) => (
+                  <div key={index} className="flex justify-between items-center">
+                    <span className="font-medium">{lang.name}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {lang.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </ScrollView>
       </div>

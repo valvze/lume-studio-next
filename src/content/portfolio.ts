@@ -1,44 +1,37 @@
-export const PORTFOLIO_CONTENT = [
+export const PROJECTS_CONTENT = [
   {
-    name: "GreenScape Landscaping",
+    name: "Mind the gAIt",
+    period: "May 2020",
     description:
-      "Modern landing page for a landscaping company featuring service showcases, before/after galleries, and instant quote requests.",
-    img: "/images/portfolio/eco.jpg",
-    url: "#",
+      "Canada Wide Science Fair Entry - Developed a mobile-based gait analysis tool to identify musculoskeletal issues with predictive analytics.",
+    tags: ["Mobile Development", "Machine Learning", "Healthcare", "Research"],
   },
   {
-    name: "Starlight Prom Nights",
+    name: "Intuition",
+    period: "May 2019",
     description:
-      "Vibrant promotional page for high school prom parties with ticket booking, photo galleries, and theme selection.",
-    img: "/images/portfolio/event.jpg",
-    url: "#",
+      "Canada Wide Science Fair Entry - Engineered a no code development framework for building apps with modular templates.",
+    tags: ["No-Code", "Framework", "Software Development"],
+  },
+];
+
+export const EDUCATION_CONTENT = [
+  {
+    institution: "James Cook University",
+    degree: "Bachelor of Medicine, Bachelor of Surgery (MBBS)",
+    type: "Undergraduate (Medicine)",
+    gpa: "6.5/7 GPA",
+    period: "February 2022 - Present",
+    description:
+      "Comprehensive training in patient care, medical research, and clinical practice. Taken on multiple roles in the main medical student association.",
   },
   {
-    name: "Prestige College of Arts",
+    institution: "Swift Current Comprehensive High School",
+    degree: "High School Diploma",
+    type: "Years 9-12",
+    gpa: "4/4 GPA",
+    period: "September 2017 - June 2021",
     description:
-      "Elegant academic landing page with program highlights, virtual campus tours, and application portals.",
-    img: "/images/portfolio/art.jpg",
-    url: "#",
-  },
-  {
-    name: "CycleSpot Rentals",
-    description:
-      "Bike rental platform with location-based availability, pricing calculators, and secure online bookings.",
-    img: "/images/portfolio/bike.jpg",
-    url: "#",
-  },
-  {
-    name: "Bella Cucina Restaurant",
-    description:
-      "Appetizing restaurant landing page with menu displays, reservation system, and chef's specials highlights.",
-    img: "/images/portfolio/resturant.jpg",
-    url: "#",
-  },
-  {
-    name: "SereneMind Meditation",
-    description:
-      "Calming meditation app interface with guided session timers, progress tracking, and relaxation music integration.",
-    img: "/images/portfolio/meditation.jpg",
-    url: "#",
+      "Graduated with honors, demonstrating consistent academic excellence. Involved in the soccer and badminton teams, along with the robotics and business club.",
   },
 ];

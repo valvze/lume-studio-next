@@ -28,7 +28,7 @@ export const HeroHeader = () => {
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
-              "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
+            "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -39,6 +39,7 @@ export const HeroHeader = () => {
                 className="flex items-center space-x-2"
               >
                 <Logo />
+                <span className="font-semibold hidden sm:inline">Parth Shah</span>
               </Link>
 
               <button
@@ -74,6 +75,7 @@ export const HeroHeader = () => {
                       <Link
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        onClick={() => setMenuState(false)}
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -82,32 +84,13 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                {/* <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
-                >
-                  <Link href="#">
-                    <span>Login</span>
-                  </Link>
-                </Button> */}
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
-                >
-                  <Link href="/full-version">
-                    <span>Full Version</span>
-                  </Link>
-                </Button>
                 <Button
                   asChild
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <Link href="/full-version">
-                    <span>Join waitlist</span>
+                  <Link href="#contact">
+                    <span>Contact Me</span>
                   </Link>
                 </Button>
               </div>

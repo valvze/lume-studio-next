@@ -2,43 +2,55 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ScrollView } from "./scroll-view";
+import { Award, Medal, Trophy, Calendar } from "lucide-react";
 
-const members = [
+const volunteering = [
   {
-    name: "Liam Brown",
-    role: "Founder - CEO",
-    avatar: "https://alt.tailus.io/images/team/member-one.webp",
-    link: "#",
+    role: "IT Officer",
+    organization: "James Cook University Medical Students Association",
+    period: "November 2024 - Present",
+    description:
+      "Managed technical infrastructure to improve organizational efficiency and communication systems.",
   },
   {
-    name: "Elijah Jones",
-    role: "Co-Founder - CTO",
-    avatar: "https://alt.tailus.io/images/team/member-two.webp",
-    link: "#",
+    role: "Secretary",
+    organization: "James Cook University Medical Students Association",
+    period: "February 2024 - December 2024",
+    description:
+      "Led documentation and coordination of club activities, ensuring smooth operations.",
+  },
+];
+
+const certifications = [
+  {
+    name: "First Aid and CPR",
+    issuer: "Australia Wide First Aid",
+    date: "February 2023",
+    description: "Gained critical skills for emergency response and patient care.",
   },
   {
-    name: "Isabella Garcia",
-    role: "Sales Manager",
-    avatar: "https://alt.tailus.io/images/team/member-three.webp",
-    link: "#",
+    name: "Blue Card",
+    issuer: "Queensland Government",
+    date: "March 2022",
+    description: "Authorized to work with children under government standards.",
+  },
+];
+
+const awards = [
+  {
+    name: "Governor General Award",
+    issuer: "Swift Current Comprehensive High School",
+    date: "July 2021",
   },
   {
-    name: "Henry Lee",
-    role: "UX Engeneer",
-    avatar: "https://alt.tailus.io/images/team/member-four.webp",
-    link: "#",
+    name: "3x Gold Medal at Regional Science Fair",
+    issuer: "Chinook School Division",
+    date: "March 2020, 2019, 2017",
   },
   {
-    name: "Ava Williams",
-    role: "Interaction Designer",
-    avatar: "https://alt.tailus.io/images/team/member-five.webp",
-    link: "#",
-  },
-  {
-    name: "Olivia Miller",
-    role: "Visual Designer",
-    avatar: "https://alt.tailus.io/images/team/member-six.webp",
-    link: "#",
+    name: "CEMC Cayley Award",
+    issuer: "University of Waterloo",
+    date: "",
   },
 ];
 
@@ -48,68 +60,91 @@ export default function TeamSection() {
       className="bg-gray-50 py-16 md:py-32 dark:bg-transparent"
       id="team"
     >
-      <div className="mx-auto max-w-5xl border-t px-6">
-        <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">
-          Team
-        </span>
-        <ScrollView>
-          <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
-            <div className="sm:w-2/5">
-              <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
-            </div>
-
-            <div className="mt-6 sm:mt-0">
-              <p>
-                During the working process, we perform regular fitting with the
-                client because he is the only person who can feel whether a new
-                suit fits or not.
+      <div className="mx-auto max-w-5xl px-6 space-y-16">
+        {/* Volunteering Section */}
+        <div className="space-y-8">
+          <ScrollView>
+            <div className="text-center">
+              <h2 className="text-3xl font-bold sm:text-4xl">Volunteering & Leadership</h2>
+              <p className="mt-4 text-muted-foreground">
+                Contributing to the community through leadership roles and meaningful volunteerism.
               </p>
             </div>
-          </div>
-        </ScrollView>
-        <div className="mt-12 md:mt-24">
-          <ScrollView stagger delay={0.02}>
-            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-              {members.map((member, index) => (
-                <div key={index} className="group overflow-hidden">
-                  <motion.div
-                    variants={{
-                      hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-                      visible: {
-                        opacity: 1,
-                        scale: 1,
-                        filter: "blur(0px)",
-                      },
-                    }}
-                  >
-                    <img
-                      className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
-                      src={member.avatar}
-                      alt="team member"
-                      width="826"
-                      height="1239"
-                    />
-                    <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
-                      <div className="flex justify-between">
-                        <h3 className="text-title text-base font-medium transition-all duration-500 group-hover:tracking-wider">
-                          {member.name}
-                        </h3>
-                        <span className="text-xs">_0{index + 1}</span>
-                      </div>
-                      <div className="mt-1 flex items-center justify-between">
-                        <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                          {member.role}
-                        </span>
-                        <Link
-                          href={member.link}
-                          className="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
-                        >
-                          {" "}
-                          Linktree
-                        </Link>
-                      </div>
+          </ScrollView>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {volunteering.map((item, index) => (
+              <ScrollView key={item.role} delay={index * 0.1}>
+                <div className="border rounded-2xl p-6 h-full hover:bg-white dark:hover:bg-gray-900/50 transition-colors">
+                  <div className="space-y-3">
+                    <h3 className="text-lg font-semibold">{item.role}</h3>
+                    <p className="text-primary text-sm font-medium">{item.organization}</p>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Calendar className="size-4" />
+                      <span>{item.period}</span>
                     </div>
-                  </motion.div>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                </div>
+              </ScrollView>
+            ))}
+          </div>
+        </div>
+
+        {/* Certifications Section */}
+        <div className="space-y-8">
+          <ScrollView>
+            <div className="text-center">
+              <h2 className="text-3xl font-bold sm:text-4xl">Certifications</h2>
+            </div>
+          </ScrollView>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {certifications.map((cert, index) => (
+              <ScrollView key={cert.name} delay={index * 0.1}>
+                <div className="border rounded-2xl p-6 h-full hover:bg-white dark:hover:bg-gray-900/50 transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 rounded-lg bg-primary/10">
+                      <Award className="size-6 text-primary" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-semibold">{cert.name}</h3>
+                      <p className="text-sm text-primary">{cert.issuer}</p>
+                      <p className="text-sm text-muted-foreground">{cert.date}</p>
+                      <p className="text-sm text-muted-foreground">{cert.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollView>
+            ))}
+          </div>
+        </div>
+
+        {/* Awards Section */}
+        <div className="space-y-8">
+          <ScrollView>
+            <div className="text-center">
+              <h2 className="text-3xl font-bold sm:text-4xl">Awards & Recognition</h2>
+            </div>
+          </ScrollView>
+
+          <ScrollView delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {awards.map((award, index) => (
+                <div
+                  key={award.name}
+                  className="border rounded-2xl p-6 text-center hover:bg-white dark:hover:bg-gray-900/50 transition-colors"
+                >
+                  <div className="flex justify-center mb-4">
+                    <div className="p-3 rounded-full bg-yellow-100 dark:bg-yellow-900/30">
+                      <Trophy className="size-6 text-yellow-600 dark:text-yellow-400" />
+                    </div>
+                  </div>
+                  <h3 className="font-semibold">{award.name}</h3>
+                  <p className="text-sm text-primary mt-1">{award.issuer}</p>
+                  {award.date && (
+                    <p className="text-xs text-muted-foreground mt-1">{award.date}</p>
+                  )}
                 </div>
               ))}
             </div>

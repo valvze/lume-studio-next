@@ -1,7 +1,9 @@
-import PortfolioCard from "@/components/portfolio-card";
-import { PORTFOLIO_CONTENT } from "@/content/portfolio";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+"use client";
+import { ScrollView } from "@/components/scroll-view";
+import { motion } from "motion/react";
+import { PROJECTS_CONTENT, EDUCATION_CONTENT } from "@/content/portfolio";
+import { Badge } from "@/components/ui/badge";
+import { GraduationCap, Lightbulb, Calendar } from "lucide-react";
 
 export default function PortfolioSection() {
   return (
@@ -9,42 +11,71 @@ export default function PortfolioSection() {
       className="py-16 md:py-32 bg-gray-50 dark:bg-transparent"
       id="portfolio"
     >
-      <div className="mx-auto max-w-5xl space-y-12 px-6">
-        <div className="relative z-10 grid items-center gap-4 md:grid-cols-2 md:gap-12">
-          <h2 className="text-4xl font-semibold">
-            The Lyra ecosystem brings together our models
-          </h2>
-          <p className="max-w-sm sm:ml-auto">
-            Empower your team with workflows that adapt to your needs, whether
-            you prefer git synchronization or a AI Agents interface.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-          {PORTFOLIO_CONTENT.map((item, index) => (
-            <div key={index} className={index % 2 === 1 ? "md:mt-20" : ""}>
-              <PortfolioCard card={item} />
+      <div className="mx-auto max-w-5xl space-y-16 px-6">
+        {/* Education Section */}
+        <div className="space-y-8">
+          <ScrollView>
+            <div className="flex items-center gap-3 justify-center">
+              <GraduationCap className="size-8" />
+              <h2 className="text-4xl font-semibold">Education</h2>
             </div>
-          ))}
-        </div>
-        <div className="mt-20">
-          <Link
-            href="#link"
-            className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-          >
-            <span className="text-foreground text-base">Explore Projects</span>
-            <span className="dark:border-background block h-8 w-1 border-l bg-white dark:bg-zinc-700"></span>
+          </ScrollView>
 
-            <div className="bg-background group-hover:bg-muted size-8 overflow-hidden rounded-full duration-500 -rotate-45 ">
-              <div className="flex w-16 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                <span className="flex size-8">
-                  <ArrowRight className="m-auto size-4" />
-                </span>
-                <span className="flex size-8">
-                  <ArrowRight className="m-auto size-4" />
-                </span>
-              </div>
+          <div className="space-y-6">
+            {EDUCATION_CONTENT.map((edu, index) => (
+              <ScrollView key={edu.institution} delay={index * 0.1}>
+                <div className="border rounded-2xl p-6 md:p-8 hover:bg-white dark:hover:bg-gray-900/50 transition-colors">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold">{edu.institution}</h3>
+                      <p className="text-primary font-medium">{edu.degree}</p>
+                      <p className="text-sm text-muted-foreground">{edu.type} • {edu.gpa}</p>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground whitespace-nowrap">
+                      <Calendar className="size-4" />
+                      <span>{edu.period}</span>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-muted-foreground">{edu.description}</p>
+                </div>
+              </ScrollView>
+            ))}
+          </div>
+        </div>
+
+        {/* Projects Section */}
+        <div className="space-y-8">
+          <ScrollView>
+            <div className="flex items-center gap-3 justify-center">
+              <Lightbulb className="size-8" />
+              <h2 className="text-4xl font-semibold">Projects</h2>
             </div>
-          </Link>
+          </ScrollView>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {PROJECTS_CONTENT.map((project, index) => (
+              <ScrollView key={project.name} delay={index * 0.1}>
+                <div className="border rounded-2xl p-6 h-full hover:bg-white dark:hover:bg-gray-900/50 transition-colors">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-lg font-semibold">{project.name}</h3>
+                      <p className="text-sm text-muted-foreground">{project.period}</p>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <Badge key={tagIndex} variant="secondary" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ScrollView>
+            ))}
+          </div>
         </div>
       </div>
     </section>

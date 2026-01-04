@@ -8,11 +8,15 @@ export const NAV_LINKS = [
     href: "#about",
   },
   {
-    name: "Services",
-    href: "#services",
+    name: "Experience",
+    href: "#experience",
   },
   {
-    name: "Portfolio",
+    name: "Education",
     href: "#portfolio",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
   },
 ];

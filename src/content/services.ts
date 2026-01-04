@@ -1,58 +1,49 @@
-export const SERVICES_LIST = [
+export const EXPERIENCE_LIST = [
   {
-    name: "UI/UX & Web Design",
-    tags: [
-      "Figma",
-      "Wireframing",
-      "Prototyping",
-      "Responsive Design",
-      "User Testing",
-    ],
-    img: "/images/abstract-1.png",
-    url: "#",
+    title: "Founder",
+    company: "Neobloc",
+    location: "neobloc.org",
+    period: "October 2025 - Present",
     description:
-      "End-to-end digital design from wireframes to polished interfaces. We create intuitive, visually appealing experiences for websites and apps, backed by user research and iterative testing.",
+      "AI-powered flashcard generator that turns notes into study materials. Helping 10,000+ students study smarter with instant flashcard generation, smart weak spot detection, and one-click Anki export.",
+    tags: ["AI", "EdTech", "Web Development", "Entrepreneurship"],
+    url: "https://neobloc.org",
+  },
+
+  {
+    title: "Founder",
+    company: "Whitsunday Webstudio",
+    location: "Townsville",
+    period: "October 2025 - Present",
+    description:
+      "Startup specialising in small business web solutions in the FNQ region.",
+    tags: ["Web Development", "Business", "Entrepreneurship", "Client Relations"],
   },
   {
-    name: "Brand Identity Design",
-    tags: [
-      "Logo Design",
-      "Brand Guidelines",
-      "Visual Identity",
-      "Typography",
-      "Color Theory",
-    ],
-    img: "/images/abstract-2.png",
-    url: "#",
+    title: "Tutor",
+    company: "College of Medicine and Dentistry JCU",
+    location: "Townsville",
+    period: "January 2024 - November 2025",
     description:
-      "Comprehensive branding packages including logos, style guides, and asset kits. We craft cohesive visual identities that communicate your brand’s essence across all touchpoints.",
+      "Tutoring first-year and second-year medical student classes in neurological anatomy, genetics, and biology.",
+    tags: ["Teaching", "Anatomy", "Genetics", "Biology", "Mentoring"],
   },
   {
-    name: "SEO & Website Audits",
-    tags: [
-      "Technical SEO",
-      "Keyword Strategy",
-      "On-Page Optimization",
-      "Analytics",
-      "Performance Tuning",
-    ],
-    img: "/images/abstract-3.png",
-    url: "#",
+    title: "Retail Assistant",
+    company: "JD Sports",
+    location: "Townsville",
+    period: "June 2024 - October 2025",
     description:
-      "Data-driven SEO audits and optimizations to improve rankings. We analyze technical health, content gaps, and backlink profiles to drive organic growth.",
+      "Delivered excellent customer service while managing inventory and sales operations.",
+    tags: ["Customer Service", "Sales", "Inventory Management"],
   },
   {
-    name: "Social Media Marketing",
-    tags: [
-      "Meta Ads",
-      "Instagram Reels",
-      "Content Strategy",
-      "Community Management",
-      "Performance Tracking",
-    ],
-    img: "/images/abstract-5.png",
-    url: "#",
+    title: "Crew Member",
+    company: "Dairy Queen",
+    location: "Swift Current",
+    period: "September 2017 - January 2022",
     description:
-      "Full-service social media management—from organic content creation to paid campaigns. We build engaging narratives and measurable strategies tailored to each platform.",
+      "Contributed to daily operations including food preparation and customer satisfaction in a fast-paced environment.",
+    tags: ["Food Service", "Customer Service", "Team Work"],
   },
 ];
