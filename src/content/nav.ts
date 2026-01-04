@@ -18,9 +18,5 @@ export const NAV_LINKS = [
   {
     name: "References",
     href: "#references",
-  },
-  {
-    name: "Contact",
-    href: "#contact",
-  },
+  }
 ];
