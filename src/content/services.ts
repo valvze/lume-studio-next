@@ -8,8 +8,8 @@ export const EXPERIENCE_LIST = [
       "AI-powered flashcard generator that turns notes into study materials. Helping 10,000+ students study smarter with instant flashcard generation, smart weak spot detection, and one-click Anki export.",
     tags: ["AI", "EdTech", "Web Development", "Entrepreneurship"],
     url: "https://neobloc.org",
+    img: "/images/neobloc.png",
   },
-
   {
     title: "Founder",
     company: "Whitsunday Webstudio",
@@ -18,6 +18,8 @@ export const EXPERIENCE_LIST = [
     description:
       "Startup specialising in small business web solutions in the FNQ region.",
     tags: ["Web Development", "Business", "Entrepreneurship", "Client Relations"],
+    url: "https://whitsundaywebstudio.org",
+    img: "/images/webstudio.png",
   },
   {
     title: "Tutor",
@@ -27,6 +29,7 @@ export const EXPERIENCE_LIST = [
     description:
       "Tutoring first-year and second-year medical student classes in neurological anatomy, genetics, and biology.",
     tags: ["Teaching", "Anatomy", "Genetics", "Biology", "Mentoring"],
+    img: "https://images.unsplash.com/photo-1453847668862-487637052f8a?q=80&w=2352&auto=format&fit=crop",
   },
   {
     title: "Retail Assistant",
@@ -36,6 +39,7 @@ export const EXPERIENCE_LIST = [
     description:
       "Delivered excellent customer service while managing inventory and sales operations.",
     tags: ["Customer Service", "Sales", "Inventory Management"],
+    img: "https://images.unsplash.com/photo-1610623959414-3247ddd3404c?q=80&w=2340&auto=format&fit=crop",
   },
   {
     title: "Crew Member",
@@ -45,5 +49,6 @@ export const EXPERIENCE_LIST = [
     description:
       "Contributed to daily operations including food preparation and customer satisfaction in a fast-paced environment.",
     tags: ["Food Service", "Customer Service", "Team Work"],
+    img: "https://images.unsplash.com/photo-1602296751259-edfb8274b682?q=80&w=2340&auto=format&fit=crop",
   },
 ];

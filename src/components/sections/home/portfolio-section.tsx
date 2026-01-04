@@ -52,10 +52,10 @@ export default function PortfolioSection() {
             </div>
           </ScrollView>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {PROJECTS_CONTENT.map((project, index) => (
               <ScrollView key={project.name} delay={index * 0.1}>
-                <div className="border rounded-2xl p-6 h-full hover:bg-white dark:hover:bg-gray-900/50 transition-colors">
+                <div className="border rounded-2xl p-6 h-full hover:bg-white dark:hover:bg-gray-900/50 transition-colors w-full md:w-80">
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-lg font-semibold">{project.name}</h3>

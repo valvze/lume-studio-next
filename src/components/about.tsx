@@ -1,13 +1,16 @@
-import { Circle, GraduationCap, Briefcase, Award, Languages } from "lucide-react";
+import { Briefcase, Languages } from "lucide-react";
 import { ScrollView } from "./scroll-view";
 import Image from "next/image";
 
 const skills = [
-  "IT Infrastructure",
-  "Website Development",
-  "Adobe Suite",
-  "Social Media Marketing",
-  "Microsoft Office",
+  "Full-Stack Web Development",
+  "AI & Machine Learning",
+  "Cloud Infrastructure",
+  "UI/UX Design",
+  "Data Analytics",
+  "Technical Leadership",
+  "Digital Marketing Strategy",
+  "Medical Education",
 ];
 
 const languages = [
@@ -21,25 +24,37 @@ export default function ContentSection() {
   return (
     <section className="py-16 md:py-32" id="about">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
-        <div className="mx-auto max-w-xl space-y-6 text-center md:space-y-12">
-          <ScrollView>
-            <h2 className="text-balance text-4xl font-medium lg:text-5xl">
-              About Me
-            </h2>
-          </ScrollView>
-          <ScrollView>
-            <p className="text-lg">
-              I&apos;m a motivated medical student at James Cook University with a
-              multidisciplinary background spanning science research, tutoring,
-              and technology. I&apos;m passionate about combining my medical
-              knowledge with technical skills to make a meaningful impact in
-              healthcare and beyond.
-            </p>
-          </ScrollView>
-        </div>
-
         <ScrollView>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          <h2 className="text-balance text-4xl font-medium lg:text-5xl text-center">
+            About Me
+          </h2>
+        </ScrollView>
+
+        <ScrollView delay={0.1}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="md:col-span-1 flex justify-center">
+              <Image
+                src="/images/parth.jpg"
+                alt="Parth Shah"
+                width={300}
+                height={300}
+                className="rounded-2xl object-cover aspect-square"
+              />
+            </div>
+            <div className="md:col-span-2">
+              <p className="text-lg">
+                I&apos;m a motivated medical student at James Cook University with a
+                multidisciplinary background spanning science research, tutoring,
+                and technology. I&apos;m passionate about combining my medical
+                knowledge with technical skills to make a meaningful impact in
+                healthcare and beyond.
+              </p>
+            </div>
+          </div>
+        </ScrollView>
+
+        <ScrollView delay={0.2}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             {/* Skills Section */}
             <div className="space-y-6 p-6 rounded-2xl bg-gray-50 dark:bg-gray-900/50">
               <div className="flex items-center gap-3">

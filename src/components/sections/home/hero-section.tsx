@@ -91,7 +91,7 @@ export default function HeroSection() {
                   as="p"
                   className="mx-auto mt-8 max-w-2xl text-balance text-xl md:text-2xl text-muted-foreground"
                 >
-                  Aspiring Medical Professional
+                  5th Year Medical Student
                 </TextEffect>
                 <TextEffect
                   per="line"
@@ -130,7 +130,7 @@ export default function HeroSection() {
                       size="lg"
                       className="rounded-xl px-5 text-base"
                     >
-                      <Link href="mailto:parth.c.shah@gmail.com">
+                      <Link href="#contact">
                         <Mail className="size-5 mr-2" />
                         <span className="text-nowrap">Get in Touch</span>
                       </Link>

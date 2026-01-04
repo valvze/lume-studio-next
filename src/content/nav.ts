@@ -16,6 +16,10 @@ export const NAV_LINKS = [
     href: "#portfolio",
   },
   {
+    name: "References",
+    href: "#references",
+  },
+  {
     name: "Contact",
     href: "#contact",
   },

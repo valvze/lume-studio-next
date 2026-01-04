@@ -62,6 +62,66 @@ export default function FooterSection() {
               </svg>
             </Link>
             <Link
+              href="https://blog.parthshah.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Blog"
+              className="text-muted-foreground hover:text-primary block"
+            >
+              <svg
+                className="size-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                />
+              </svg>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/parth-shah-a041741b4"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-muted-foreground hover:text-primary block"
+            >
+              <svg
+                className="size-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+                />
+              </svg>
+            </Link>
+            <Link
+              href="https://www.strava.com/athletes/45198516"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Strava"
+              className="text-muted-foreground hover:text-primary block"
+            >
+              <svg
+                className="size-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"
+                />
+              </svg>
+            </Link>
+            <Link
               href="https://parthshah.org"
               target="_blank"
               rel="noopener noreferrer"
