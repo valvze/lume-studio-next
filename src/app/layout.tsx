@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Parth Shah | Aspiring Medical Professional",
   description: "Motivated medical student with a multidisciplinary background, including hands-on experience in science research, tutoring, and technology. Dedicated to excellence, problem-solving, and community contribution.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/apple-icon.svg",
+  },
 };
 
 export default function RootLayout({
